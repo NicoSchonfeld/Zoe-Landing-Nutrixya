@@ -1,0 +1,30 @@
+@mixin btn($scale) {
+
+    p{
+        font-family: 'poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: $txtBlanco;
+        margin: auto;
+        text-align: center;
+    }
+    padding: 13px 30px;
+    
+    display: inline-block;
+    text-decoration: none;
+    background-color: $colorVerde;
+
+    border-radius: 32px;
+
+    transition: all 0.5s ease-out;
+    &:hover{
+        transform: scale($scale);
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        p{
+            font-size: 15px;
+        }
+    }
+}

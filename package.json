@@ -1,0 +1,31 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "landing-page",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass styles.scss ./css/styles.css -w --no-source-map -s compressed"
+  },
+  "keywords": [
+    "fertilización",
+    "suelos",
+    "suelo",
+    "nutrientes",
+    "nutrición",
+    "inteligente",
+    "agro",
+    "agronomía",
+    "cultivo",
+    "lotes",
+    "estrato",
+    "campo",
+    "BPAs",
+    "campo",
+    "localidad",
+    "cultivo",
+    "siembra",
+    "recomendaciones"
+  ],
+  "author": "",
+  "license": "ISC"
+}

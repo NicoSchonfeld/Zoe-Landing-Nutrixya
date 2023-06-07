@@ -1,0 +1,272 @@
+//contact-footer
+.footer{
+    background-color: $colorVerde;
+}
+
+.footer__title{
+
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: $txtBlanco;
+    font-weight: 500;
+}
+
+.footer__container{
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 1em;
+    text-align: center;
+
+    &__form{
+        
+        //formulario de contacto
+        .footer__form{
+
+            max-width: 500px;
+            text-align: center;
+        
+            display: grid;
+            grid-template-rows: 100px 1fr;
+        
+            margin: 0 auto;
+        
+            .footer__inputs{
+        
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+        
+                .input{
+                    
+                    color: $txtBlanco;
+                    background-color: transparent;
+                    border: 1px solid $txtBlanco;
+                    padding: 5px 10px;
+        
+                    &::placeholder{
+                        color: $txtBlanco;
+                        background-color: transparent;
+                    }
+                    &:focus{
+                        outline: none
+                    }
+                }
+        
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"]{
+        
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+        
+                    display: inline-block;
+                    width: 49%;
+                    margin-bottom: 30px;
+                    padding: 10px;
+                }
+        
+                textarea{
+            
+                    width: 100%;
+                    margin-bottom: 15px;
+                    max-height: 160px;
+                }
+                
+                input[type="submit"]{
+        
+                    cursor: pointer;
+                    color: hsl(0, 0%, 100%);
+                    width: 120px;
+                    text-align: center;
+                    padding: 14px 0;
+        
+                    &:hover{
+                        color: #272727;
+                    }
+                }
+            }
+        }
+    }
+
+    &__data{
+        
+        .footer__contacts{
+            
+            
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            
+            div{
+
+                width: 250px;
+                height: 40px;
+                margin: auto auto;
+                text-align: center;
+                background-color: $verde-btn;
+                border-radius: 35px;
+
+                transition: all 350ms;
+            }
+
+            .contacts__email,
+            .contacts__number{
+
+                color: $txtBlanco;
+                font-weight: 500;
+                text-decoration: none;
+                text-align: center;
+                margin: auto;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+//logo bpas
+.footer__bpas{
+    
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid $txtBlanco;
+
+    .bpas{
+
+        width: 8%;
+        border-radius: 50%;
+    }
+}
+
+//copyright
+.footer__copy{
+
+    --padding-container: 50px 0;
+    padding: var(--padding-container);
+    margin: 0 auto;
+    text-align: center;
+    color: $txtBlanco;
+
+    .footer__copyright{
+        
+        font-size: 18px;
+        font-weight: 300;
+        a{
+            text-decoration: none;
+            color: $txtBlanco;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    //footer-contact
+    .footer__container{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+        gap: 5em;
+        text-align: center;
+    }
+
+    //logo bpas
+    .footer__bpas{
+
+        .bpas{
+
+            width: 60px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .footer__title{
+        font-size: 1.8rem;
+    }
+    
+    .footer__container{
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+        gap: 4em;
+        text-align: center;
+    
+        //border-bottom: 1px solid $txtBlanco;
+    
+        &__form{
+            //formulario de contacto
+            .footer__form{
+    
+                max-width: 500px;
+                text-align: center;
+            
+                display: grid;
+                grid-template-rows: 100px 1fr;
+            
+                margin: 0 auto;
+            
+                .footer__inputs{
+            
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: space-around;
+            
+                    .input{
+
+                        text-align: center;
+                        margin: 5px auto;
+            
+                        &::placeholder{
+                            font-size: 13px;
+                            color: $txtBlanco;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    
+        &__data{
+            
+            .footer__contacts{
+                
+                div{
+    
+                    width: 200px;
+                    height: 40px;
+                    margin: auto auto;
+                    text-align: center;
+                    background-color: $verde-btn;
+    
+                    transition: all 350ms;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+    
+                .contacts__email,
+                .contacts__number{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

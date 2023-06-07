@@ -1,0 +1,252 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+    transition: all 400ms;
+}
+
+//nav
+.nav{
+
+    position: relative;
+    --padding-conainer: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    &__logo{
+
+        transition: all 400ms;
+        margin-right: auto;
+        &__img{
+            margin-right: auto;
+            width: 180px;
+        }
+
+        &__title{
+            font-weight: 300;
+        }
+    }
+    
+    &__link{
+        
+        transition: all 400ms;
+        margin-left: auto;
+        padding: 0;
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 0.5em;
+
+        .registrate{
+
+            transition: all 400ms;
+            margin-left: 5em;
+        }
+        
+        &__items{
+
+            padding: 6px;
+            
+            list-style: none;
+            
+            transition: all 300ms;
+            &:hover{
+                opacity: 0.7;
+            }
+            
+            .nav__links{
+                font-size: 14px;
+                color: $txtBlanco;
+                text-decoration: none;
+            }
+
+            .nav__links--inicio{
+                display: none;
+            }
+        }
+    }
+}
+
+//hero
+.hero{
+    
+    color: $txtBlanco;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+.hero::before{
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/NutrixyaHome\ \(1\).jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+//hero container
+.hero__container{
+    
+    max-width: 800px;
+    display: grid;
+    --padding-container: 0;
+    
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    
+    padding-bottom: 100px;
+    text-align: center;
+    
+    &__title{
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    
+}
+
+//botón hamburguesa
+.nav__menu{
+    
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+    
+    &__img{
+        display: block;
+        width: 30px;
+    }
+}
+//botón cerrar menu desplegable
+.nav__close{
+    display: var(--show, none);
+}
+
+@media screen and (max-width: 869px) {
+
+    //header
+    .header{
+        position: absolute;
+    }
+
+    //botón menu
+    .nav__menu{
+
+        font-size: 60px;
+        padding: 5px;
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 10px;
+
+        background-color: $colorVerde;
+        border-radius: 5px;
+    }
+
+    //nav--menu
+    .nav{
+
+        .nav__links--inicio{
+            
+            display: block;
+            font-size: 14px;
+            color: $txtBlanco;
+            text-decoration: none;
+        }
+
+        .nav__link--menu{
+
+            position: fixed;
+            background-color: $colorVerde;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 60%;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 9999;
+
+            opacity: 0;
+            pointer-events: none;
+            
+            transition: 0.5s opacity;
+
+            li{
+                a{
+                    color: $txtBlanco;
+                    padding: 5px;
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        .nav__link--show{
+            --show: block;
+            opacity: 1;
+            pointer-events: unset;
+        }
+
+        .nav__close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .hero::before{
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    .hero__container{
+        &__title{
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        &__link{
+            .registrate{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 568px){
+
+    .hero__container{
+        &__title{
+            font-size: 2rem;
+        }
+    }
+}
+
+
+
+

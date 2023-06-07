@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+    
+    .nav_mod{
+    
+        background-color: $colorVerde;
+        box-shadow: 0 10px 25px -22px $negro-opaco;
+        transition: all 400ms;
+        height: 80px;
+        .nav{
+            .nav__logo, .nav__link{
+    
+                .registrate{
+                    background-color: $verde-btn;
+                    font-weight: 500;
+
+                    border: 1px dashed $verde-btn;
+                    border-radius: 35px;
+
+                    &:hover{
+
+                        opacity: 1;
+                        background: transparent;
+                    }
+                }
+    
+                transition: all 400ms;
+                a{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

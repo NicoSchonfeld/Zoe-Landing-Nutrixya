@@ -1,0 +1,32 @@
+:root{
+    --padding-conainer: 100px 0;
+    --color-txt: hsl(96, 71%, 99%);
+    --color-title: hsl(203, 69%, 5%);  
+}
+
+//clase container
+.container{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-conainer);
+}
+
+//clase subtitle
+.subtitle{
+    color: var(--color-title);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+//boton cta: call to action
+.btn__cta{
+    
+    display: inline-block;
+    margin: auto;
+    justify-self: center;
+    @include btn(1.1);
+}

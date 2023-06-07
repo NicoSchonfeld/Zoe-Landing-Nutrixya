@@ -1,0 +1,554 @@
+//whatsapp
+.whatsapp{
+    a{
+        color: rgb(255, 255, 255);
+    }
+
+    cursor: pointer;
+
+    position: fixed;
+    right: 5px;
+    bottom: 15px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    padding: 7px 7px;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to top, #2FB944 20%, #52CE5F 100%);
+
+    transition: all 300ms;
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+//que es nutrixya
+.knowledge{
+
+    margin-top: 80px;
+
+    .knowledge__container{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        text-align: center;
+
+        .knowledge__paragraph{
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        &__picture{
+            max-width: 500px;
+
+            .knowledge__img{
+
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+//tagline
+.tagline{
+
+    background-image: linear-gradient(rgba(71, 54, 31, 0.856),rgba(182, 142, 86, 0.781)), url("../images/NutrixyaBanner\ \(2\).jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    //clip-path: polygon(100% 0, 100% 70%, 50% 95%, 0 70%, 0 0);
+    
+    &__container{
+        
+        padding: 0 0;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .subtitle{
+
+            font-size: 2.5em;
+            color: $txtBlanco;
+            margin: auto 0;
+        }
+    }
+}
+
+//price: planes
+.price{
+    text-align: center;
+
+    &__table{
+
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5em;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &__element{
+
+            background-color: hsla(105, 92%, 44%, 0.338);
+            text-align: center;
+            border-radius: 10px;
+            width: 330px;
+            padding: 40px;
+
+            --color-plan: #696871;
+            --color-price: #1D293F;
+            --bg-cta: hsl(96, 71%, 99%);
+            --color-cta: #5454D4;
+            --color-items: #696871;
+
+            .price__name{
+                color: var(--color-plan);
+                margin-bottom: 15px;
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+
+            .price__plan{
+                font-size: 2.5em;
+                color: var(--color-price);
+            }
+
+            .price__items{
+                margin-top: 35px;
+                display: grid;
+                gap: 1em;
+                font-weight: 300;
+                font-size: 1.2rem;
+                margin-bottom: 50px;
+                color: var(--color-items);
+            }
+
+            .price__btn__cta{
+
+                color: var(--color-price);
+                
+                display: block;
+                padding: 20px 0;
+                border-radius: 10px;
+                text-decoration: none;
+                background-color: var(--bg-cta);
+                font-weight: 600;
+                box-shadow: 0 0 1px rgb(0, 0, 0, .5);
+
+                transition: all 300ms;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .price__table__element--best{
+
+            width: 370px;
+            padding: 60px 40px;
+            background-color: #ff7243e5;
+            --color-plan: hsla(203, 69%, 5%, 0.894);
+            --color-price: hsl(96, 71%, 99%);
+            --bg-cta: #9f3819aa;
+            --color-cta: hsl(96, 71%, 99%);
+            --color-items: hsl(96, 71%, 99%);
+        }
+    }
+}
+
+//app
+.container__paragraph{
+
+    align-items: center;
+    margin: auto auto;
+    margin-top: 20px;
+    line-height: 1.7;
+    width: 80%;
+
+    .paragraph__whatsapp,
+    .paragraph__contacto{
+        color: $verde-btn;
+        text-decoration: none;
+        padding: 3px;
+    }
+}
+.app{
+
+    background-color: #B2FB99;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 80px;
+
+    .app__container__title{
+        padding: 100px 0 0 0;
+    }
+
+    .cta{
+
+        padding: 20px;
+        text-align: center;
+        margin: 0 auto;
+
+        .btn__cta{
+            background-color: $verde-btn;
+        }
+    }
+
+    .app__title{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 400px;
+        height: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__container{
+
+        width: 100%;
+        padding: 25px 0;
+
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        gap: 1em;
+        align-items: center;
+        margin: 0 auto;
+
+        &__arrow{
+
+            width: 90%;
+            cursor: pointer;
+        }
+
+        &__body{
+
+            width: 100%;
+            padding: 40px 0 0 0;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content;
+
+            align-self: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+
+            gap: 0;
+
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+            opacity: 0;
+            pointer-events: none;
+
+            .app__texts{
+
+                max-width: 600px;
+                height: min-content;
+                text-align: center;
+                margin: 0 auto;
+
+                h2{
+                    font-size: 25px;
+                    margin-bottom: 5px;
+                }
+
+            }
+
+            .app__img{
+
+                width: 100%;
+                height: min-content;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .app__course{
+
+                display: inline-block;
+                padding: 10px;
+            }
+        }
+
+        .app__body--show{
+
+            pointer-events: unset;
+            opacity: 1;
+            transition: opacity 1.5s ease-in-out;
+        }
+    }
+}
+
+//Se Parte
+.stories{
+    text-align: center;
+
+    &__main{
+
+        padding-top: 80px;
+        display: grid;
+        width: 60%;
+        margin: 0 auto;
+        gap: 1em;
+        overflow: hidden;
+        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+
+        &__icons{
+
+            
+            display: grid;
+            gap: 0.3em;
+            justify-items: center;
+            width: 260px;
+            overflow: hidden;
+            margin: 0 auto;
+            
+            height: 200px;
+            background-color: hsla(122, 40%, 50%, 0.221);
+            align-items: center;
+
+            border-radius: 35px;
+
+            transition: all 350ms;
+            &:hover{
+                transform: translateY(-5px);
+                box-shadow: 0 0 5px 0 $colorVerde;
+            }
+
+            a{
+                text-decoration: none;
+                color:  #1D293F;
+            }
+
+            .stories__title{
+                line-height: 1.7;
+            }
+
+            .icon{
+                font-size: 40px;
+                color: #1D293F;
+                margin-bottom: 20px;
+            }
+        }
+
+        .stories__icons--registrate{
+
+            height: 240px;
+            width: 270px;
+
+            background-color: hsla(122, 40%, 50%, 0.867);
+
+            .icon{
+                font-size: 50px;
+            }
+
+            .stories__title{
+                line-height: 1.7;
+                font-size: 25px;
+            }
+        }
+    }
+
+    .btn__planes{
+        margin-top: 20px;
+    }
+}
+
+//support
+.container__support{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .whatsapp{
+
+        width: 45px;
+        height: 45px;
+        font-size: 30px;
+    }
+
+    //que es nutrixya
+    .knowledge{
+        .knowledge__container{
+    
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content min-content;
+            gap: 1em;
+            text-align: center;
+            margin: 0 auto;
+
+            &__picture{
+                
+                max-width: 500px;
+                margin: 0 auto;
+                grid-row: 1/2;
+                justify-self: center;
+                .knowledge__img{
+    
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    //tagline
+    //tagline
+    .tagline{
+        &__container{
+            .subtitle{
+                font-size: 25px;
+            }
+        }
+    }
+
+    //slider app
+    .app{
+        .app__container__title{
+
+            .app__title{
+
+                padding: 20px;
+                width: max-content;
+                font-size: 1.6rem;
+            }
+        }
+        .app__container{
+            grid-template-columns: 26px 1fr 26px;
+
+            &__body{
+
+                grid-template-columns:  1fr;
+                grid-template-rows: max-content max-content;
+                gap: 3em;
+                justify-items: center;
+
+                .subtitle{
+                    font-size: 24px;
+                }
+                .app__texts{
+                    .subtitle{
+                        font-size: 26px;
+                    }
+                    .app__course{
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    //se parte
+    .stories{
+        &__main{
+    
+            width: 90%;
+        }
+    }
+
+    //price: planes
+
+    .price{
+        &__table{
+            &__element{
+                width: 90%;
+
+                .price__name{
+                    font-size: 2rem;
+                }
+            }
+        
+            &__element--best{
+                width: 90%;
+                padding: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+
+    //que es nutrixya
+    .knowledge{
+        .knowledge__container{
+    
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content 1fr;
+            gap: 1em;
+
+        }
+    }
+
+    //conocé nuestra app
+    .app{
+
+        grid-template-columns: 26px 1fr 26px;
+        gap: .9em;
+
+        .app__container{
+            &__arrow{
+                width: 100%;
+            }
+
+            &__body{
+                .subtitle{
+                    font-size: 20px;
+                }
+                .app__texts{
+                    .app__course{
+                        font-size: 20px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+
+        .app__container__title{
+
+            .app__title{
+
+                padding: 15px;
+                width: max-content;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    //se parte
+    .stories{
+        &__main{
+            &__icons{
+                width: 200px;
+            }
+            .stories__icons--registrate{
+                width: 210px;
+            }
+        }
+    }
+}
+
